@@ -2,5 +2,5 @@ data<-read.table("household_power_consumption.txt", header=FALSE,na.strings="?",
 as.Date(data$Date,format="%d/%m/%Y")
 DayTime<-strptime(paste(data$Date,data$Time),"%d/%m/%Y %H:%M:%S")
 png(filename="plot2.png", width=480, height=480)
-plot(DayTime,data$Global_active_power, type="l",ylab="Global Active Power (kilowatts)")
+plot(DayTime,data$Global_active_power, type="l",ylab="Global Active Power (kilowatts)",xlab="")
 dev.off
